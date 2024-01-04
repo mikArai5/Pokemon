@@ -8,7 +8,17 @@ export const Card = ({pokemon}) => {
         </div>
         <h3 className='cardName'>{pokemon.name}</h3>
         <div className='cardTypes'>
-            
+            <div>タイプ</div>
+            {pokemon.types.map((type) => {
+              return (
+                <div>
+                  <span className='typeName'>{type.type.name}</span>
+                </div>
+              );
+            })}
+        </div>
+        <div className='cardInfo'>
+          
         </div>
     </div>
   );
